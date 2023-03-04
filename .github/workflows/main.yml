@@ -62,8 +62,8 @@ build_and_push_to_docker_hub:
         with:
           push: true
           tags: amaterasuowned/infra_actions:latest
-jobs:
-  deploy:
+deploy:
+    name: Deploy to docker hub
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
